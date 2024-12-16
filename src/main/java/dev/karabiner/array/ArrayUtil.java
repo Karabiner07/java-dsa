@@ -93,6 +93,29 @@ public class ArrayUtil {
             return newArray;
         }
 
+        //Given an array of n-1 distint numbers in the range of 1 to n, Find the missing number in it
+        //time complexity o(n)
+        public static int findMissingElement(int[] array) {
+
+            //number of elements including missing element
+            int n = array.length+1;
+
+            //sum of first n natural numbers
+            int sumOfElements = (n * (n+1)) / 2;
+
+            //store the sum into the missingElement variable
+            int missingElement = sumOfElements;
+
+            //subtract current element from the missingElement(contains sumOfElements)
+            for (int i=0; i<array.length; i++) {
+                missingElement = missingElement - array[i];
+            }
+
+            return missingElement;
+        }
+
+
+
 
 
 
