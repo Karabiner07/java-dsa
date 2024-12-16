@@ -1,6 +1,7 @@
 package dev.karabiner;
 
 import dev.karabiner.linkedlists.SinglyLinkedListNode;
+import dev.karabiner.linkedlists.SinglyLinkedListUtil;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,8 +19,7 @@ public class Main {
         third.setNext(fourth);
         fourth.setNext(null);
 
-
-
+        SinglyLinkedListUtil.display(head);
 
     }
 
