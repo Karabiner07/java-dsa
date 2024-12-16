@@ -82,5 +82,18 @@ public class ArrayUtil {
             return array;
         }
 
+        public static int[] resizeArray(int[] array, int newSize) {
+            //create a new array of length newSize
+            int[] newArray = new int[newSize];
+
+            //copy all old array elements into new array
+            for (int i=0; i<array.length; i++) {
+                newArray[i] = array[i];
+            }
+            return newArray;
+        }
+
+
+
 
 }
