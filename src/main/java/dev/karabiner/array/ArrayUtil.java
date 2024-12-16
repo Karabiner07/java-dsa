@@ -33,4 +33,27 @@ public class ArrayUtil {
             }
             return min;
         }
+
+        public static int findSecondMax(int[] array) {
+            int max = Integer.MIN_VALUE;
+            int secondMax = Integer.MIN_VALUE;
+
+            for (int i=0; i<array.length; i++) {
+
+                //if the current element is greater than the max value
+                //then assign max to second max
+                //assign current element to max
+                if(array[i] > max) {
+                    secondMax = max;
+                    max = array[i];
+                }
+
+                //if the current element is not greater than max but greater than second max
+                //then assign the current element to the second max
+                if(array[i] > secondMax && array[i] != max) {
+                    secondMax = array[i];
+                }
+            }
+            return secondMax;
+        }
 }
