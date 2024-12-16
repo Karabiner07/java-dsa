@@ -56,4 +56,28 @@ public class ArrayUtil {
             }
             return secondMax;
         }
+
+        public static int[] moveZerosToEnd(int[] array) {
+            //stores the first element's index
+            int zeroIndex = 0;
+
+            for (int i=0; i<array.length; i++) {
+
+                //if the current element is not zero AND if array[zeroIndex] is 0
+                //then swap both elements
+                //note : zeroIndex usually lags behind the current i'th iteration
+                if (array[i] != 0 && array[zeroIndex] == 0) {
+                    int temp = array[i];
+                    array[i] = array[zeroIndex];
+                    array[zeroIndex] = temp;
+                }
+
+                //if the array[zeroIndex] does not contain 0, then zeroIndex++
+                //this is case is useful when the
+                if(array[zeroIndex] != 0) {
+                    zeroIndex++;
+                }
+            }
+            return array;
+        }
 }
