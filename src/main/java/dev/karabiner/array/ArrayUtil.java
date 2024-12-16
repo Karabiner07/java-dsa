@@ -59,6 +59,7 @@ public class ArrayUtil {
 
         public static int[] moveZerosToEnd(int[] array) {
             //stores the first element's index
+            //focuses on 0's index
             int zeroIndex = 0;
 
             for (int i=0; i<array.length; i++) {
@@ -80,4 +81,6 @@ public class ArrayUtil {
             }
             return array;
         }
+
+
 }
